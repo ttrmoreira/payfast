@@ -1,0 +1,3 @@
+{"level":"info","message":"Consultando pagamento no memcached: 68","timestamp":"2018-06-11T12:08:41.293Z"}
+{"level":"info","message":"::1 - - [11/Jun/2018:12:08:41 +0000] \"GET /pagamentos/pagamento/68 HTTP/1.1\" 200 159\n","timestamp":"2018-06-11T12:08:41.317Z"}
+{"level":"info","message":"::1 - - [14/Jun/2018:12:05:27 +0000] \"POST /pagamentos/pagamento HTTP/1.1\" 201 491\n","timestamp":"2018-06-14T12:05:27.893Z"}
