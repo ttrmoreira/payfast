@@ -1,9 +1,10 @@
-Livraria Online da Casa do Código
-Trata-se de um sistema com algumas funcionalidades básicas de uma livraria online especificamente da Casa do Código. Esse sistema faz parte dos exemplos de cenários situacionais que são usados como exercício para aprendizado do aluno no curso básico sobre NodeJs que é conduzido pela Alura Cursos Online.
+PayFast gatewy de pagamentos OnLine
+
+Trata-se de uma aplicação para funcionar como um gateway de pagamentos, ou seja, uma plataforma que pode ser utilizada por outros aplicativos para integrar meios de pagamento. Esse sistema faz parte dos exemplos de cenários situacionais que são usados como exercício para aprendizado do aluno no curso avançado sobre NodeJs que é conduzido pela Alura Cursos Online.
 
 Getting Started
-Para começar a rodar a aplicação da Livraria On Line em sua máquina inicialmente você precisará:
-	- Copie o diretório casadocodigo para um diretório de sua preferência.
+Para começar a rodar a aplicação da PayFast em sua máquina inicialmente você precisará:
+	- Copie o diretório payfast e cardfast para um diretório de sua preferência.
 	- Instale a engine javascript do NodeJS em sua máquina acessando o link https://nodejs.org/en/download/
 	- Após instalado o NodeJS abra um terminal e digite node -v que ele deve retornar a versão instalada
 	- Confirme se o NPM (Node Package Manager) já está instalado em sua máquina digitando "npm -version
@@ -11,29 +12,29 @@ Para começar a rodar a aplicação da Livraria On Line em sua máquina inicialm
 	- Instale o MySQL em sua máquina baixando através do link https://dev.mysql.com/downloads/mysql/
 	- Assim que rodar o MySQL rode o seguinte comando SQL: 
 				============================================
-				create database casadocodigo_nodejs;"
+				> create database payfast;
+    			
+    			> use payfast;
 				
-				use casadocodigo_nodejs;
+				
 
-				CREATE TABLE livros (
-  				id int(11) NOT NULL AUTO_INCREMENT PRIMARY KEY,
-  				titulo varchar(255) DEFAULT NULL,
-  				descricao text,
-  				preco decimal(10,2) DEFAULT NULL);
+				> CREATE TABLE pagamentos (
+        			id int(11) NOT NULL AUTO_INCREMENT,
+			       	forma_de_pagamento varchar(255) NOT NULL,
+			       	valor decimal(10,2) NOT NULL,
+			       	moeda varchar(3) NOT NULL,
+			       	status varchar(255) NOT NULL,
+			       	data DATE,
+			       	descricao text,
+			        PRIMARY KEY (id)
+			       );
 
-  				insert into livros(titulo, descricao, preco)
-				values ('Comecando com nodejs', 'livro introdutório sobre nodejs', 39.90);
-
-				insert into livros(titulo, descricao, preco)
-				values ('Comecando com javascript', 'livro introdutório sobre javascript', 39.90);
-
-				insert into livros(titulo, descricao, preco)
-				values ('Comecando com express', 'livro introdutório sobre express', 39.90);
+  				> show tables;
 
   				============================================
+&&&& @TODO - Parei aqui &&&&
 
-  	- Em seguida, crie o banco de dados novamente porém com o nome da base como casadocodigo_nodejs_test create database casadocodigo_nodejs_test;"
-  	- Entre no arquivo connectionFactory e entre com o usuário e senha do seu banco de dados em mySQL.
+    - Entre no arquivo connectionFactory e entre com o usuário e senha do seu banco de dados em mySQL.
 	- No console entre no diretório "casadocodigo" e digite o comando "nodemon app.js"
 	- Acesse o browser e digite na barra de endereços:
 			 "http://localhost:3000/" => Site de vendas para visulizar os livros cadastrados;
